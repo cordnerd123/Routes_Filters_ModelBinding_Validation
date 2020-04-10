@@ -1,0 +1,27 @@
+﻿@model Guitars
+
+@{
+  ViewBag.Title = "Create Guitars";
+  Layout = null;
+}
+
+    <form asp-action="CreateGuitars" method="post">
+        <div class="form-group">
+            <label asp-for="Brand"></label>
+            <input asp-for="Brand" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Model"></label>
+            <input asp-for="Model" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Color"></label>
+            <input asp-for="Color" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="YearMade"></label>
+            <input asp-for="YearMade" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>

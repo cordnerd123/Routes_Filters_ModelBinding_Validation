@@ -24,7 +24,20 @@ namespace Routes_Filters_ModelBinding_Validation.Controllers
 
     public ViewResult Create() => View(new Person());
 
-    [HttpPost]
+
+// This is where I created my model binding/////////////////////////////////////////////////
+        //this is taken as a pair
+    public ViewResult CreateGuitars()
+    {
+        Guitars guitar = new Guitars();
+        return View(guitar);
+    }
+        [HttpPost]
+    public ViewResult CreateGuitars(Guitars guitar) => View(guitar);
+// above is where I created my model biding//////////////////////////////////////////////////////////////
+
+
+        [HttpPost]
     public ViewResult Create(Person model) => View("IndexNullSafe", model);
 
     public ViewResult CreateWithAddress() => View(new Person());
